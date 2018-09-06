@@ -7,12 +7,6 @@
   "author": "Martin Allgood <martintallgood@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "vue": "^2.5.17"
-  },
-  "scripts": {
-    "start:client": "vue-cli-service serve --open"
-  },
-  "dependencies": {
     "axios": "^0.18.0",
     "bulma": "^0.7.1",
     "dotenv": "^6.0.0",
@@ -21,6 +15,9 @@
     "sass-loader": "^7.0.3",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
+  },
+  "scripts": {
+    "start:client": "vue-cli-service serve --open"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.9",

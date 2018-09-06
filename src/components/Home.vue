@@ -1,5 +1,5 @@
 <template lang="html">
-  <h1>Hello World</h1>
+  <h1 class="title is-1">Hello Home</h1>
 </template>
 
 <script>
@@ -9,4 +9,7 @@ export default {
 </script>
 
 <style lang="css">
+  .title {
+    background-color: black;
+  }
 </style>
