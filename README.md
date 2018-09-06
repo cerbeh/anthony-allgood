@@ -8,6 +8,8 @@ By Martin Allgood
 About Me
   -Anthony Allgood
     --Small piece describing yourself
+    --Currently
+
   -WorkingCredits
     -Section for acting
       --school workshops
