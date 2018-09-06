@@ -2,7 +2,7 @@
   <div id="app">
     <div class="media">
       <div class="media-left">
-        <h1>on the left</h1>
+        <Sidebar />
       </div>
       <div class="media-content">
         <router-view></router-view>
@@ -12,8 +12,11 @@
 </template>
 
 <script>
+import Sidebar from './components/common/Sidebar';
+
 export default {
   name: 'app',
+  components: { Sidebar }
 };
 </script>
 

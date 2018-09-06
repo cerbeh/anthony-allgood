@@ -1,5 +1,7 @@
 <template lang="html">
-  <h1 class="title is-1">Hello Home</h1>
+  <div class="">
+    <h1 class="title is-1">Hello Home</h1>
+  </div>
 </template>
 
 <script>
@@ -10,6 +12,6 @@ export default {
 
 <style lang="css">
   .title {
-    background-color: black;
+    background-color: chartreuse;
   }
 </style>
