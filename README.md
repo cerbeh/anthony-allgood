@@ -7,21 +7,25 @@ By Martin Allgood
 
 About Me
   -Anthony Allgood
-    Small piece describing yourself
-
-  -Section for acting
-    --school workshops
-    --professional exp
-    --voicereel (is this the right place)
-    --Entertainer
-
+    --Small piece describing yourself
+  -WorkingCredits
+    -Section for acting
+      --school workshops
+      --professional exp
+      --voicereel (is this the right place)
+      --Entertainer
+  -TIE
+    -Youth Theatre Leader
+    -School Shows
+    -Project work
   -Section for music
     -My music
       --tracks hosted on soundcloud
     -Musical Theatre
-
   -Section for writer
-    --Any scripts written over the past
+    -Any scripts written over the past
+
+    -For more contact agent
 
 Galleries
   -albums
@@ -33,4 +37,7 @@ Galleries
     --Video needs to be made?
 
 contact section
-  -Link to spotlight - cv is there. insta, twitter etc Equity
+  -Link to spotlight
+  -Agent website
+  -social media (twitter/linkedin)
+  -email
