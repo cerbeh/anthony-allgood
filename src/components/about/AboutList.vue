@@ -5,9 +5,21 @@
       <p>About</p>
     </div>
     <ul v-if="sidebarItemList">
-      <li v-on:click="$emit('toggle-side-bar')">Anthony Allgood</li>
-      <li v-on:click="$emit('toggle-side-bar')">Working Credits</li>
-      <li v-on:click="$emit('toggle-side-bar')">TIE</li>
+      <li v-on:click="$emit('toggle-side-bar')">
+        <a href="/#/aboutme/anthony">Anthony Allgood</a>
+      </li>
+      <li v-on:click="$emit('toggle-side-bar')">
+        <a href="/#/aboutme/work">Working Credits</a>
+      </li>
+      <li v-on:click="$emit('toggle-side-bar')">
+        <a href="/#/aboutme/tie">TIE</a>
+      </li>
+      <li v-on:click="$emit('toggle-side-bar')">
+        <a href="/#/aboutme/music">Music</a>
+      </li>
+      <li v-on:click="$emit('toggle-side-bar')">
+        <a href="/#/aboutme/writer">Writer</a>
+      </li>
     </ul>
   </div>
 </template>
