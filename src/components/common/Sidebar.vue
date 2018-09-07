@@ -18,7 +18,7 @@
 
 <script>
 import AboutList from '../about/AboutList';
-import GalleryList from '../gallery/GalleryList';
+import GalleryList from '../gallery/GalleryIndex';
 
 export default {
   name: 'sidebar',

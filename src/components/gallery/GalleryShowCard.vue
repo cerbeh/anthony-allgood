@@ -16,16 +16,17 @@
 import axios from 'axios';
 
 export default {
-  name: 'HeadshotsGallery',
+  name: 'GalleryShow',
   data() {
     return {
       images: []
     }
   },
   mounted() {
+    console.log(this);
     axios({
       method: 'GET',
-      url: 'https://api.imgur.com/3/album/zO9KA/images',
+      url: `https://api.imgur.com/3/album/${this.$route.params.id}/images`,
       headers: { Authorization: 'Client-ID 7993a6868066306'}
     }).then(res => {
       this.images = res.data.data.map(e => e.link)

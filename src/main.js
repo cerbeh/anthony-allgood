@@ -7,10 +7,7 @@ Vue.use(VueRouter);
 import Home from './components/Home';
 import AboutIndex from './components/about/index';
 
-import HeadshotsGallery from './components/gallery/Headshots';
-import ProductionGallery from './components/gallery/Production';
-import PersonalGallery from './components/gallery/Personal';
-import ShowreelGallery from './components/gallery/Showreel';
+import GalleryShowCard from './components/gallery/GalleryShowCard';
 
 import Contact from './components/common/contact';
 
@@ -25,17 +22,8 @@ const routes = [
     path: '/contact',
     component: Contact
   },{
-    path: '/gallery/headshots',
-    component: HeadshotsGallery
-  },{
-    path: '/gallery/personal',
-    component: PersonalGallery
-  },{
-    path: '/gallery/production',
-    component: ProductionGallery
-  },{
-    path: '/gallery/showreel',
-    component: ShowreelGallery
+    path: '/gallery/:id',
+    component: GalleryShowCard
   }
 ];
 
