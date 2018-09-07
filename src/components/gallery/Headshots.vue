@@ -19,7 +19,7 @@ export default {
   name: 'HeadshotsGallery',
   data() {
     return {
-      images: ['a','b','c']
+      images: []
     }
   },
   mounted() {
