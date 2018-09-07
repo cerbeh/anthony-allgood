@@ -5,9 +5,9 @@
       <p>About</p>
     </div>
     <ul v-if="sidebarItemList">
-      <li>Anthony Allgood</li>
-      <li>Working Credits</li>
-      <li>TIE</li>
+      <li v-on:click="$emit('toggle-side-bar')">Anthony Allgood</li>
+      <li v-on:click="$emit('toggle-side-bar')">Working Credits</li>
+      <li v-on:click="$emit('toggle-side-bar')">TIE</li>
     </ul>
   </div>
 </template>
@@ -17,12 +17,16 @@ export default {
   name: 'AboutList',
   data() {
     return {
-      sidebarItemList: false
+      sidebarItemList: false,
+      //Line here with the prop from sidebar.vue to toggle the sidebar on and off with the button?
     };
   },
   methods: {
     toggleList() {
-      this.sidebarItemList = !this.sidebarItemList;
+      this.sidebarItemList = !this.sidebarItemList
+    },
+    toggleSidebar() {
+      this.sidebarOn = !this.sidebarOn;
     }
   }
 }
@@ -37,6 +41,8 @@ export default {
   padding: 20px;
   margin: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 </style>

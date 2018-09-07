@@ -2,10 +2,10 @@
   <div class="sidebar-style">
     <ul class="navbar-style" v-if="sidebarOn">
       <li>
-        <AboutList />
+        <AboutList v-on:toggle-side-bar="toggleSidebar" />
       </li>
       <li>
-        <a href="/#/gallery" class="sidebar-item" v-on:click="toggleSidebar">Gallery</a>
+        <GalleryList v-on:toggle-side-bar="toggleSidebar" />
       </li>
       <li>
         <a href="/#/contact" class="sidebar-item" v-on:click="toggleSidebar">Contact</a>
@@ -18,6 +18,8 @@
 
 <script>
 import AboutList from '../about/AboutList';
+import GalleryList from '../gallery/GalleryList';
+
 export default {
   name: 'sidebar',
   data() {
@@ -28,10 +30,14 @@ export default {
   methods: {
     toggleSidebar() {
       this.sidebarOn = !this.sidebarOn;
+    },
+    toggleList() {
+      this.sidebarItemList = !this.sidebarItemList;
     }
   },
   components: {
-    AboutList
+    AboutList,
+    GalleryList
   }
 }
 </script>
