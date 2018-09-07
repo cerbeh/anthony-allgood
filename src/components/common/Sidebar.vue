@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import AboutList from '../about/list';
+import AboutList from '../about/AboutList';
 export default {
   name: 'sidebar',
   data() {
