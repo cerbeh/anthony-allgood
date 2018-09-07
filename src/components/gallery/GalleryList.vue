@@ -4,10 +4,18 @@
       <p>Gallery</p>
     </div>
     <ul v-if="sidebarItemList">
-      <li v-on:click="$emit('toggle-side-bar')">Headshots</li>
-      <li v-on:click="$emit('toggle-side-bar')">Production Shots</li>
-      <li v-on:click="$emit('toggle-side-bar')">Personal</li>
-      <li v-on:click="$emit('toggle-side-bar')">Showreel</li>
+      <li v-on:click="$emit('toggle-side-bar')">
+        <a href="/#/gallery/headshots">Headshots</a>
+      </li>
+      <li v-on:click="$emit('toggle-side-bar')">
+        <a href="/#/gallery/production">Production Shots</a>
+      </li>
+      <li v-on:click="$emit('toggle-side-bar')">
+        <a href="/#/gallery/personal">Personal</a>
+      </li>
+      <li v-on:click="$emit('toggle-side-bar')">
+        <a href="/#/gallery/showreel">Showreel</a>
+      </li>
     </ul>
   </div>
 </template>

@@ -3,9 +3,15 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 
 Vue.use(VueRouter);
+
 import Home from './components/Home';
 import AboutIndex from './components/about/index';
-import GalleryIndex from './components/gallery/index';
+
+import HeadshotsGallery from './components/gallery/Headshots';
+import ProductionGallery from './components/gallery/Production';
+import PersonalGallery from './components/gallery/Personal';
+import ShowreelGallery from './components/gallery/Showreel';
+
 import Contact from './components/common/contact';
 
 const routes = [
@@ -19,8 +25,17 @@ const routes = [
     path: '/contact',
     component: Contact
   },{
-    path: '/gallery',
-    component: GalleryIndex
+    path: '/gallery/headshots',
+    component: HeadshotsGallery
+  },{
+    path: '/gallery/personal',
+    component: PersonalGallery
+  },{
+    path: '/gallery/production',
+    component: ProductionGallery
+  },{
+    path: '/gallery/showreel',
+    component: ShowreelGallery
   }
 ];
 
