@@ -5,7 +5,11 @@
         <Sidebar />
       </div>
       <div class="media-content">
-        <router-view></router-view>
+        <section class="hero is-fullheight">
+          <div class="hero-body">
+            <router-view></router-view>
+          </div>
+        </section>
       </div>
     </div>
   </div>
