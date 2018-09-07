@@ -4,11 +4,23 @@ import App from './App.vue';
 
 Vue.use(VueRouter);
 import Home from './components/Home';
+import AboutIndex from './components/about/index';
+import GalleryIndex from './components/gallery/index';
+import Contact from './components/common/contact';
 
 const routes = [
   {
     path: '/',
     component: Home
+  },{
+    path: '/about',
+    component: AboutIndex
+  },{
+    path: '/contact',
+    component: Contact
+  },{
+    path: '/gallery',
+    component: GalleryIndex
   }
 ];
 
