@@ -1,4 +1,9 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 
-app.listen(4000, () => console.log('Up and running'));
+const { port, dbURI } =  require('./config/environment');
+
+mongoose.connect(dbURI, {useNewUrlParser: true});
+
+app.listen(port, () => console.log('Up and running'));
