@@ -8,16 +8,22 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
+    "bcrypt": "^3.0.0",
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
     "bulma": "^0.7.1",
     "dotenv": "^6.0.0",
     "eslint-plugin-react": "^7.10.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.13",
     "node-sass": "^4.9.2",
     "sass-loader": "^7.0.3",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
   },
   "scripts": {
-    "start:client": "vue-cli-service serve --open"
+    "start:client": "vue-cli-service serve --open",
+    "start:server": "nodemon index.js" 
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.9",
