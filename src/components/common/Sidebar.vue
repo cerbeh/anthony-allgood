@@ -46,6 +46,7 @@ export default {
 .sidebar-style {
   height: 100vh;
   display: flex;
+  /* position: absolute; */
 }
 .navbar-style {
   display: flex;
