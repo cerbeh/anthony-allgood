@@ -1,35 +1,28 @@
 <template lang="html">
-  <div class="columns is-multiline is-centered">
-    <div class="column is-12 has-text-centered">
-      <h1 class="title is-1">Gallery</h1>
-    </div>
-    <div v-for="image in images" class="column is-2 gallery-item">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image">
-            <img :src="image.link" alt="">
-          </figure>
-        </div>
-        <div class="card-header">
-          <div class="card-header-title is-centered">
-            <h3 class="title is-5">
-              {{ image.description }}
-            </h3>
-          </div>
-        </div>
+  <div >
+    <div class="columns is-multiline is-centered">
+      <div class="column is-12 has-text-centered">
+        <h1 class="title is-1">Gallery</h1>
+      </div>
+      <div class="column is-2" v-for="image in images" v-on:click="toggleModal">
+        <GalleryImage v-bind:image="image" />
       </div>
     </div>
+    <Modal v-bind:modalOn="modalOn" v-on:toggle-modal="toggleModal"/>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
+import GalleryImage from './GalleryImageCard';
+import Modal from '../common/ModalCard';
 
 export default {
   name: 'GalleryShow',
   data() {
     return {
-      images: []
+      images: [],
+      modalOn: false
     }
   },
   methods: {
@@ -39,14 +32,17 @@ export default {
         url: `https://api.imgur.com/3/album/${this.$route.params.id}/images`,
         headers: { Authorization: 'Client-ID 7993a6868066306'}
       }).then(res => {
-        console.log(res.data.data);
         this.images = res.data.data
       })
+    },
+    toggleModal() {
+      this.modalOn = !this.modalOn;
     }
   },
   mounted() {
     this.loadGalleries()
   },
+  components: { GalleryImage, Modal },
   watch: {
     '$route.params.id': function() {
       this.loadGalleries()
