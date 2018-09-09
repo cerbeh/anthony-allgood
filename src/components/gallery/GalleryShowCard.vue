@@ -1,15 +1,13 @@
 <template lang="html">
-  <div >
     <div class="columns is-multiline is-centered">
       <div class="column is-12 has-text-centered">
         <h1 class="title is-1">Gallery</h1>
       </div>
-      <div class="column is-2" v-for="image in images" v-on:click="toggleModal">
-        <GalleryImage v-bind:image="image" />
+      <div class="column is-2" v-for="image in images" v-on:click="toggleModal" v-on:toggle-modal="toggleModal">
+        <GalleryImage :image="image" />
+        <Modal :modalOn="modalOn" :data="image"/>
       </div>
     </div>
-    <Modal v-bind:modalOn="modalOn" v-on:toggle-modal="toggleModal"/>
-  </div>
 </template>
 
 <script>
@@ -35,7 +33,8 @@ export default {
         this.images = res.data.data
       })
     },
-    toggleModal() {
+    toggleModal(target) {
+      console.log(target);
       this.modalOn = !this.modalOn;
     }
   },

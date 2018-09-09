@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="modal is-active" id="wrapper" v-if="modalOn">
     <div class="modal-background" v-on:click="$emit('toggle-modal')"></div>
-    <div class="modal-content test">
-
-      <!-- Any other Bulma elements you want -->
+    <div class="modal-content">
+      <img :src="data.link" alt="">
+      <!-- Any other Bulma elements you want --> {{ data }}
     </div>
     <button class="modal-close is-large" aria-label="close"
     v-on:click="$emit('toggle-modal')"></button>
@@ -14,13 +14,9 @@
 <script>
 export default {
   name: 'Modal',
-  props: ['modalOn']
+  props: ['modalOn','data']
 }
 </script>
 
 <style lang="css">
-.test {
-  background-color: chartreuse;
-  height: 20%;
-}
 </style>
