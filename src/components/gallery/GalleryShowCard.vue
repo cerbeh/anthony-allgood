@@ -3,10 +3,10 @@
       <div class="column is-12 has-text-centered">
         <h1 class="title is-1">Gallery</h1>
       </div>
-      <div class="column is-2" v-for="image in images" v-on:click="toggleModal" v-on:toggle-modal="toggleModal">
+      <div class="column is-2" v-for="image in images" v-on:click="toggleModal(image)" >
         <GalleryImage :image="image" />
-        <Modal :modalOn="modalOn" :data="image"/>
       </div>
+      <Modal :modalOn="modalOn" :data="modalData" v-on:toggle-modal="toggleModal"/>
     </div>
 </template>
 
@@ -20,7 +20,8 @@ export default {
   data() {
     return {
       images: [],
-      modalOn: false
+      modalOn: false,
+      modalData: {}
     }
   },
   methods: {
@@ -33,9 +34,9 @@ export default {
         this.images = res.data.data
       })
     },
-    toggleModal(target) {
-      console.log(target);
+    toggleModal(data) {
       this.modalOn = !this.modalOn;
+      this.modalData = data;
     }
   },
   mounted() {

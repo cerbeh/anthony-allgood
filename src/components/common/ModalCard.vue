@@ -3,7 +3,6 @@
     <div class="modal-background" v-on:click="$emit('toggle-modal')"></div>
     <div class="modal-content">
       <img :src="data.link" alt="">
-      <!-- Any other Bulma elements you want --> {{ data }}
     </div>
     <button class="modal-close is-large" aria-label="close"
     v-on:click="$emit('toggle-modal')"></button>
