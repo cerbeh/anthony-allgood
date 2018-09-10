@@ -7,6 +7,14 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }
 });
 
+userSchema.set('toJSON', {
+  virtuals: true,
+  transform(doc, json) {
+    delete json.password;
+    return json;
+  }
+});
+
 userSchema.virtual('passwordConfirmation')
   .set(function setPasswordConfirmation(passwordConfirmation) {
     this._passwordConfirmation = passwordConfirmation;
@@ -27,7 +35,7 @@ userSchema.pre('save', function hashPassword(next) {
 });
 
 userSchema.methods.validatePassword = function validatePassword(password) {
-  return bcrypt.compareSync(password. this.password);
+  return bcrypt.compareSync(password, this.password);
 };
 
-module.expors = mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);

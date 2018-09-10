@@ -7,12 +7,12 @@ const User = require('../models/user');
 mongoose.connect(dbURI, (err, db) => {
   db.dropDatabase()
     .then(() => User.create([{
-      username: 'martin',
-      email: 'martin@martin.com',
-      password: 'martin',
-      passwordConfirmation: 'martin'
+      username: 'Martin',
+      email: 'm@m.com',
+      password: 'm',
+      passwordConfirmation: 'm'
     }]))
     .then(user => console.log(`Created ${user}`))
     .catch(err => console.log(err))
-    .finally(() => mongoose.conection.close());
+    .finally(() => mongoose.connection.close());
 });
