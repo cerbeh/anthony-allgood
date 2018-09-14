@@ -5,7 +5,8 @@
     </div>
     <ul v-if="sidebarItemList">
       <li
-        v-for="gallery in galleries" v-on:click="$emit('toggle-side-bar')"
+        v-for="gallery in galleries"
+        v-on:click="$emit('toggle-side-bar')"
       >
         <a :href="`/#/gallery/${gallery.id}`">{{gallery.title}}</a>
       </li>

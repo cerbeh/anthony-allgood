@@ -31,6 +31,7 @@ export default {
         url: `https://api.imgur.com/3/album/${this.$route.params.id}/images`,
         headers: { Authorization: 'Client-ID 7993a6868066306'}
       }).then(res => {
+        console.log(res.data);
         this.images = res.data.data
       })
     },

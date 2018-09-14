@@ -1,10 +1,26 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const creditScehma = new mongoose.Schema({
+  title: { type: String, required: 'Please provide a title' },
+  discipline: {
+    type: String,
+    enum: ['Film','Commercial','Musical','Stage','Pantomime','Short Film','Workshop','Further Credits']
+  },
+  character: String,
+  company: String,
+  date: Date
+},{
+  id: false
+});
+
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true },
   email: { type: String, required: true },
-  password: { type: String, required: true }
+  password: { type: String, required: true },
+  credits: [creditScehma]
+},{
+  id: false
 });
 
 userSchema.set('toJSON', {
