@@ -10,7 +10,30 @@ mongoose.connect(dbURI, (err, db) => {
       username: 'Martin',
       email: 'm@m.com',
       password: 'm',
-      passwordConfirmation: 'm'
+      passwordConfirmation: 'm',
+      credits: [
+        {
+          title: 'Harry Potter and the Deathly Hallows',
+          discipline: 'Film',
+          character: 'Teffington (Gringots Guard)',
+          company: 'Warner Bros'
+        },{
+          title: 'Hereafter',
+          discipline: 'Film',
+          character: 'The Visitor',
+          company: 'GT Films Inc, Clint Eastwood'
+        },{
+          title: 'NHS Values Film - Wrexham Park Hospital',
+          discipline: 'Film',
+          character: 'Tim Dry',
+          company: 'The Giggle Group'
+        },{
+          title: 'Uncut',
+          discipline: 'Film',
+          character: 'Dad',
+          company: 'Greenacre Film'
+        }
+      ]
     }]))
     .then(user => console.log(`Created ${user}`))
     .catch(err => console.log(err))

@@ -9,7 +9,8 @@ const creditScehma = new mongoose.Schema({
   },
   character: String,
   company: String,
-  date: Date
+  date: Date,
+  director: String
 },{
   id: false
 });
