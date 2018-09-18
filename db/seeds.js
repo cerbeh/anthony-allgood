@@ -21,17 +21,26 @@ mongoose.connect(dbURI, (err, db) => {
           title: 'Hereafter',
           discipline: 'Film',
           character: 'The Visitor',
-          company: 'GT Films Inc, Clint Eastwood'
+          company: 'GT Films Inc',
+          director: 'Clint Eastwood'
         },{
           title: 'NHS Values Film - Wrexham Park Hospital',
           discipline: 'Film',
           character: 'Tim Dry',
-          company: 'The Giggle Group'
+          company: 'The Giggle Group',
+          director: 'Geoff Trodd'
         },{
           title: 'Uncut',
           discipline: 'Film',
           character: 'Dad',
-          company: 'Greenacre Film'
+          company: 'Greenacre Film',
+          director: 'Philip West'
+        },{
+          title: 'Closer',
+          discipline: 'Commercial',
+          character: 'Customer',
+          company: 'Outsider Tv',
+          director: 'Jorn Threlfall'
         }
       ]
     }]))

@@ -1,7 +1,7 @@
 const User = require('../models/user');
+const user = '5ba12d4cb7bebdc9e039547f';
 
 function createRoute(req, res, next) {
-  const user = '5b967e3972ad7458c21b2b35';
   //Need to find a different way of identifying the user as req.params.id wont exist. Could hard code the id as its intended to be a single user site anyways
   User.findById(user)
     .then(user => {
@@ -12,6 +12,14 @@ function createRoute(req, res, next) {
     .catch(next);
 }
 
+
+function indexRoute(req, res, next) {
+  User.findById(user)
+    .then(user => res.json(user.credits))
+    .catch(next);
+}
+
 module.exports = {
-  create: createRoute
+  create: createRoute,
+  index: indexRoute
 };
