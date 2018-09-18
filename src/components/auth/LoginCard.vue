@@ -1,29 +1,33 @@
 <template lang="html">
-  <section className="hero section registrationBackground is-fullheight ">
-    <div className="container">
-      <h1 className="title">Login</h1>
+  <section class="hero section is-fullheight ">
+    <div class="container">
+      <h1 class="title">Login</h1>
       <form onSubmit=handleSubmit>
-        <div className="field">
-          <label className="usernameOrEmail">Username or Email</label>
-          <input className="input" name="usernameOrEmail" onChange={this.handleChange} />
+        <div class="field">
+          <label class="usernameOrEmail">Username or Email</label>
+          <input class="input" name="usernameOrEmail" onChange={this.handleChange} />
         </div>
-        <div className="field">
-          <label className="password">Password</label>
-          <input className="input" type="password" name="password"  onChange={this.handleChange} />
+        <div class="field">
+          <label class="password">Password</label>
+          <input class="input" type="password" name="password"  onChange={this.handleChange} />
 
         </div>
-        <button className="button">Submit</button>
+        <button class="button">Submit</button>
         <hr />
       </form>
-      <Link className="" to="/register">Not a member? Sign up now</Link>
+      <Link class="" to="/register">Not a member? Sign up now</Link>
     </div>
   </section>
 </template>
 
 <script>
 export default {
+
 }
 </script>
 
 <style lang="css">
+.registrationBackground {
+  width: 20px;
+}
 </style>

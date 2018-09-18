@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 
 import Home from './components/Home';
 import AboutIndex from './components/about/index';
+import LoginCard from './components/auth/LoginCard';
 
 import GalleryShowCard from './components/gallery/GalleryShowCard';
 
@@ -24,6 +25,9 @@ const routes = [
   },{
     path: '/gallery/:id',
     component: GalleryShowCard
+  },{
+    path: '/login',
+    component: LoginCard
   }
 ];
 

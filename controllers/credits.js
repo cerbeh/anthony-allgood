@@ -1,9 +1,13 @@
 const User = require('../models/user');
-const user = '5ba12d4cb7bebdc9e039547f';
 
+
+//Data is hardcoded here but eventually the front end will be delivering data
+// const data = '5ba12d4cb7bebdc9e039547f';
+
+
+//Needs to possibly be adapted to work in a different way. Index route below is using req.body.data
 function createRoute(req, res, next) {
-  //Need to find a different way of identifying the user as req.params.id wont exist. Could hard code the id as its intended to be a single user site anyways
-  User.findById(user)
+  User.findById(req.body)
     .then(user => {
       user.credits.push(req.body);
       return user.save();
@@ -14,7 +18,7 @@ function createRoute(req, res, next) {
 
 
 function indexRoute(req, res, next) {
-  User.findById(user)
+  User.findById(req.body.data)
     .then(user => res.json(user.credits))
     .catch(next);
 }

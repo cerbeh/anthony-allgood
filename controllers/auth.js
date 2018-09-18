@@ -40,7 +40,14 @@ function login(req, res, next) {
     .catch(next);
 }
 
+function index(req, res, next) {
+  User.find()
+    .then(users => res.json(users))
+    .catch(next);
+}
+
 module.exports = {
   register,
-  login
+  login,
+  index
 };

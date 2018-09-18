@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const  _ = require('lodash');
 
 const creditScehma = new mongoose.Schema({
   title: { type: String, required: 'Please provide a title' },
@@ -54,5 +55,26 @@ userSchema.pre('save', function hashPassword(next) {
 userSchema.methods.validatePassword = function validatePassword(password) {
   return bcrypt.compareSync(password, this.password);
 };
+
+userSchema.virtual('creditTypes').get(function() {
+  return _.uniq(this.credits.map(credit => {
+    return credit.discipline;
+  }))
+    .map(discipline => {
+      return {
+        discipline: discipline,
+        credits: this.credits.filter(credit => {
+          if(credit.discipline === discipline) return credit;
+        })
+
+        // .map(session => {
+        //   return {
+        //     date: session.date,
+        //     duration: session.duration
+        //   };
+        // })
+      };
+    });
+});
 
 module.exports = mongoose.model('User', userSchema);
