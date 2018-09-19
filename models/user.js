@@ -66,13 +66,6 @@ userSchema.virtual('creditTypes').get(function() {
         credits: this.credits.filter(credit => {
           if(credit.discipline === discipline) return credit;
         })
-
-        // .map(session => {
-        //   return {
-        //     date: session.date,
-        //     duration: session.duration
-        //   };
-        // })
       };
     });
 });
