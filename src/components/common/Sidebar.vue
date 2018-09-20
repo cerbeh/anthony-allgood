@@ -5,6 +5,9 @@
         <AboutList v-on:toggle-side-bar="toggleSidebar" />
       </li>
       <li>
+        <WorkingCredits v-on:toggle-side-bar="toggleSidebar" />
+      </li>
+      <li>
         <GalleryList v-on:toggle-side-bar="toggleSidebar" />
       </li>
       <li>
@@ -19,6 +22,7 @@
 <script>
 import AboutList from '../about/AboutList';
 import GalleryList from '../gallery/GalleryIndex';
+import WorkingCredits from '../WorkingCredits';
 
 export default {
   name: 'sidebar',
@@ -37,7 +41,8 @@ export default {
   },
   components: {
     AboutList,
-    GalleryList
+    GalleryList,
+    WorkingCredits
   }
 }
 </script>
