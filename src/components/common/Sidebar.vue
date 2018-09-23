@@ -6,7 +6,6 @@
       </li>
       <li>
         <a href="/#/workingcredits" class="sidebar-item" v-on:click="toggleSidebar">Acting Credits</a>
-        <!-- <WorkingCredits v-on:toggle-side-bar="toggleSidebar" /> -->
       </li>
       <li>
         <GalleryList v-on:toggle-side-bar="toggleSidebar" />
@@ -23,7 +22,6 @@
 <script>
 import AboutList from '../about/AboutList';
 import GalleryList from '../gallery/GalleryIndex';
-import WorkingCredits from '../workingcredits/WorkingCreditsIndex';
 
 export default {
   name: 'sidebar',
@@ -43,7 +41,6 @@ export default {
   components: {
     AboutList,
     GalleryList,
-    WorkingCredits
   }
 };
 </script>

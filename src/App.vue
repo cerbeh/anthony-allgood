@@ -7,7 +7,7 @@
       <div class="media-content">
         <section class="hero is-fullheight">
           <div class="hero-body">
-            <router-view></router-view>
+            <router-view class="box"></router-view>
           </div>
         </section>
       </div>
