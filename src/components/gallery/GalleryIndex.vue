@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="sidebar-item">
-    <div class="sidebar-list-header" v-on:click="toggleList">
+    <div
+      class="sidebar-list-header"
+      v-on:click="toggleList"
+    >
       <p>Gallery</p>
     </div>
     <ul v-if="sidebarItemList">
@@ -16,6 +19,7 @@
 
 <script>
 import axios from 'axios'
+
 export default {
   name: 'GalleryList',
   data() {
