@@ -1,5 +1,25 @@
 <template lang="html">
-  <h1 class="title is-2">Working Credits: {{credits.discipline}}</h1>
+  <section>
+    <h1 class="title is-2">Working Credits: {{credits.discipline}}</h1>
+    <table class="table is-striped is-hoverable is-fullwidth">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Character</th>
+          <th>Director</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="credit in credits.credits">
+          <td>{{credit.title}}</td>
+          <td>{{credit.character}}</td>
+          <td>{{credit.director}}</td>
+          <td>{{credit.company}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </template>
 
 <script>
@@ -23,8 +43,8 @@ export default {
         method: 'GET',
         url: `/api/workingcredits/${this.$route.params.id}`,
       }).then(res => {
-        console.log(res.data)
         this.credits = res.data
+        console.log(this.credits);
       })
     },
 
