@@ -22,7 +22,7 @@
 <script>
 import AboutList from '../about/AboutList';
 import GalleryList from '../gallery/GalleryIndex';
-import WorkingCredits from '../WorkingCredits';
+import WorkingCredits from '../workingcredits/WorkingCreditsIndex';
 
 export default {
   name: 'sidebar',
