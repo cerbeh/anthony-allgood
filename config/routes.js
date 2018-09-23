@@ -6,7 +6,7 @@ router.post('/createcredit', credits.create);
 
 router.get('/workingcredits', credits.index);
 
-router.get('/workingcredits/:id', credits.show);
+// router.get('/workingcredits/:id', credits.show);
 
 router.get('/users', auth.index);
 

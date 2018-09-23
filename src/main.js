@@ -12,6 +12,7 @@ import LoginCard from './components/auth/LoginCard';
 import GalleryShowCard from './components/gallery/GalleryShowCard';
 
 import WorkingCreditsShowCard from './components/workingcredits/WorkingCreditsShowCard';
+import WorkingCreditsIndex from './components/workingcredits/WorkingCreditsIndex';
 
 import Contact from './components/common/contact';
 
@@ -28,6 +29,9 @@ const routes = [
   },{
     path: '/login',
     component: LoginCard
+  },{
+    path: '/workingcredits',
+    component: WorkingCreditsIndex
   },{
     path: '/workingcredits/:id',
     component: WorkingCreditsShowCard

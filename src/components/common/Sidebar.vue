@@ -5,7 +5,8 @@
         <AboutList v-on:toggle-side-bar="toggleSidebar" />
       </li>
       <li>
-        <WorkingCredits v-on:toggle-side-bar="toggleSidebar" />
+        <a href="/#/workingcredits" class="sidebar-item" v-on:click="toggleSidebar">Acting Credits</a>
+        <!-- <WorkingCredits v-on:toggle-side-bar="toggleSidebar" /> -->
       </li>
       <li>
         <GalleryList v-on:toggle-side-bar="toggleSidebar" />

@@ -1,4 +1,4 @@
-<template lang="html">
+<!-- <template lang="html">
   <section class="section">
     <div class="container">
       <h1 class="title is-2">Working Credits: {{credits.discipline}}</h1>
@@ -64,4 +64,4 @@ export default {
 </script>
 
 <style lang="css">
-</style>
+</style> -->
