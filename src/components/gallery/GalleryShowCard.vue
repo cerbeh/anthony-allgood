@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 import GalleryImage from './GalleryImageCard';
 import Modal from '../common/ModalCard';
 
@@ -22,7 +22,7 @@ export default {
       images: [],
       modalOn: false,
       modalData: {}
-    }
+    };
   },
   methods: {
     loadGalleries() {
@@ -31,9 +31,8 @@ export default {
         url: `https://api.imgur.com/3/album/${this.$route.params.id}/images`,
         headers: { Authorization: 'Client-ID 7993a6868066306'}
       }).then(res => {
-        console.log(res.data);
-        this.images = res.data.data
-      })
+        this.images = res.data.data;
+      });
     },
     toggleModal(data) {
       this.modalOn = !this.modalOn;
@@ -41,15 +40,15 @@ export default {
     }
   },
   mounted() {
-    this.loadGalleries()
+    this.loadGalleries();
   },
   components: { GalleryImage, Modal },
   watch: {
     '$route.params.id': function() {
-      this.loadGalleries()
+      this.loadGalleries();
     }
   }
-}
+};
 </script>
 
 <style lang="css">

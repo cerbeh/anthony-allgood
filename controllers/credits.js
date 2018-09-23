@@ -23,7 +23,19 @@ function indexRoute(req, res, next) {
     .catch(next);
 }
 
+function showRoute(req, res, next) {
+  User.findById(data)
+    .then(user => {
+      const credits = user.creditTypes.filter(creditType => {
+        return creditType.discipline === req.params.id;
+      })[0];
+      res.json(credits);
+    })
+    .catch(next);
+}
+
 module.exports = {
   create: createRoute,
-  index: indexRoute
+  index: indexRoute,
+  show: showRoute
 };

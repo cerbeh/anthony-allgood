@@ -44,7 +44,7 @@ export default {
     GalleryList,
     WorkingCredits
   }
-}
+};
 </script>
 
 <style lang="css">
