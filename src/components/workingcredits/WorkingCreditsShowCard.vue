@@ -1,5 +1,5 @@
 <template lang="html">
-  <h1>Working Credits</h1>
+  <h1 class="title is-2">Working Credits: {{credits.discipline}}</h1>
 </template>
 
 <script>
@@ -24,7 +24,7 @@ export default {
         url: `/api/workingcredits/${this.$route.params.id}`,
       }).then(res => {
         console.log(res.data)
-        this.credits = res.data.data
+        this.credits = res.data
       })
     },
 
