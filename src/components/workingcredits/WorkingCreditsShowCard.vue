@@ -26,16 +26,12 @@
 
 <script>
 import axios from 'axios'
-// import GalleryImage from './GalleryImageCard';
-// import Modal from '../common/ModalCard';
 
 export default {
   name: 'GalleryShow',
   data() {
     return {
       credits: [],
-      // modalOn: false,
-      // modalData: {}
     }
   },
   methods: {
@@ -46,7 +42,6 @@ export default {
         url: `/api/workingcredits/${this.$route.params.id}`,
       }).then(res => {
         this.credits = res.data
-        console.log(this.credits);
       })
     },
 
@@ -60,7 +55,6 @@ export default {
     console.log(this.$route.params);
     this.loadCredits()
   },
-  // components: { GalleryImage, Modal },
   watch: {
     '$route.params.id': function() {
       this.loadCredits()

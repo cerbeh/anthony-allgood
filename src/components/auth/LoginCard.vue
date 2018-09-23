@@ -5,7 +5,7 @@
       <form v-on:submit.prevent="login">
         <div class="field">
           <label class="usernameOrEmail">Username or Email</label>
-          <input class="input" name="usernameOrEmail" v-model="userLoginDetails.username" />
+          <input class="input" name="usernameOrEmail" v-model="userLoginDetails.email" />
         </div>
         <div class="field">
           <label class="password">Password</label>
@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       userLoginDetails: {
-        username: '',
+        email: '',
         password: ''
       }
     }
