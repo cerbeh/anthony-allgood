@@ -1,10 +1,12 @@
 <template lang="html">
-  <table class="table is-striped is-hoverable is-fullwidth">
+  <table
+    class="table is-striped is-hoverable is-fullwidth"
+    v-on:click="toggleTable(medium)"
+  >
     <thead>
       <tr>
         <th
           colspan="4"
-          v-on:click="toggleTable(medium)"
         >
           <h2 class="subtitle is-3">{{medium.discipline}}</h2>
         </th>

@@ -6,6 +6,7 @@
     >
       <p>Gallery</p>
     </div>
+    <!-- Will work on getting vue carosel to work. -->
     <ul v-if="sidebarItemList">
       <li
         v-for="gallery in galleries"
@@ -19,6 +20,7 @@
 
 <script>
 import axios from 'axios'
+import { Carousel, Slide } from 'vue-carousel';
 
 export default {
   name: 'GalleryList',
@@ -39,7 +41,14 @@ export default {
       url: 'https://api.imgur.com/3/account/cerbeh/albums',
       headers: { Authorization: 'Client-ID 7993a6868066306'}
     })
-      .then(res => this.galleries = res.data.data)
+      .then(res => {
+        console.log(res.data.data);
+        this.galleries = res.data.data
+      })
+  },
+  components: {
+    Carousel,
+    Slide
   }
 }
 </script>

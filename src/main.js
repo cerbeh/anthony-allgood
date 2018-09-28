@@ -1,9 +1,13 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueCarousel from 'vue-carousel';
 import App from './App.vue';
+
+
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
+Vue.use(VueCarousel);
 
 
 import Home from './components/Home';
