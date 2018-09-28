@@ -1,20 +1,14 @@
 <template lang="html">
   <div class="sidebar-item">
-    <div
-      class="sidebar-list-header"
-      v-on:click="toggleList"
-    >
-      <p>Gallery</p>
-    </div>
+      <h2 class="title is-3">Gallery</h2>
     <!-- Will work on getting vue carosel to work. -->
-    <ul v-if="sidebarItemList">
-      <li
-        v-for="gallery in galleries"
-        v-on:click="$emit('toggle-side-bar')"
-      >
-        <a :href="`/#/gallery/${gallery.id}`">{{gallery.title}}</a>
-      </li>
-    </ul>
+    <carousel
+      :per-page="1"
+    >
+      <slide v-for="gallery in galleries">
+        <img :src="https://imgur.com/0Gd7Pf8" alt="">
+      </slide>
+    </carousel>
   </div>
 </template>
 

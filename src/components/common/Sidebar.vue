@@ -2,14 +2,14 @@
   <div class="sidebar-style">
     <ul class="navbar-style" v-if="sidebarOn">
       <li>
-        <!-- <AboutList v-on:toggle-side-bar="toggleSidebar" /> -->
         <a href="/#/aboutme" class="sidebar-item" v-on:click="toggleSidebar">About Me</a>
       </li>
       <li>
         <a href="/#/workingcredits" class="sidebar-item" v-on:click="toggleSidebar">Acting Credits</a>
       </li>
       <li>
-        <GalleryList v-on:toggle-side-bar="toggleSidebar" />
+        <!-- <GalleryList v-on:toggle-side-bar="toggleSidebar" /> -->
+        <a href="/#/gallery" class="sidebar-item" v-on:click="toggleSidebar">Gallery</a>
       </li>
       <li>
         <a href="/#/contact" class="sidebar-item" v-on:click="toggleSidebar">Contact</a>
@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import AboutList from '../about/AboutList';
 import GalleryList from '../gallery/GalleryIndex';
 
 export default {
@@ -40,7 +39,6 @@ export default {
     }
   },
   components: {
-    AboutList,
     GalleryList
   }
 };
