@@ -16,31 +16,36 @@ mongoose.connect(dbURI, (err, db) => {
           title: 'Harry Potter and the Deathly Hallows',
           discipline: 'Film',
           character: 'Teffington (Gringots Guard)',
-          company: 'Warner Bros'
+          company: 'Warner Bros',
+          showData: false
         },{
           title: 'Hereafter',
           discipline: 'Film',
           character: 'The Visitor',
           company: 'GT Films Inc',
-          director: 'Clint Eastwood'
+          director: 'Clint Eastwood',
+          showData: false
         },{
           title: 'NHS Values Film - Wrexham Park Hospital',
           discipline: 'Film',
           character: 'Tim Dry',
           company: 'The Giggle Group',
-          director: 'Geoff Trodd'
+          director: 'Geoff Trodd',
+          showData: false
         },{
           title: 'Uncut',
           discipline: 'Film',
           character: 'Dad',
           company: 'Greenacre Film',
-          director: 'Philip West'
+          director: 'Philip West',
+          showData: false
         },{
           title: 'Closer',
           discipline: 'Commercial',
           character: 'Customer',
           company: 'Outsider Tv',
-          director: 'Jorn Threlfall'
+          director: 'Jorn Threlfall',
+          showData: false
         }
       ]
     }]))

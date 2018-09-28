@@ -7,7 +7,7 @@
       id="medium-wrapper"
       v-for="medium in mediums"
       >
-        <TableCard :medium="medium"/>
+        <TableCard :medium="medium" :toggleTable="toggleTable"/>
         <hr/>
       </div>
     </div>
@@ -36,6 +36,9 @@ export default {
   methods: {
     toggleList() {
       this.sidebarItemList = !this.sidebarItemList;
+    },
+    toggleTable(targetTable) {
+      targetTable.showData = !targetTable.showData;
     }
   },
   components: {
