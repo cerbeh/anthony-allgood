@@ -1,7 +1,7 @@
 <!-- <a href="/#/about" class="sidebar-item" v-on:click="toggleSidebar">About</a> -->
 <template lang="html">
   <div>
-      <p>About List page</p>
+      <p>About List Page</p>
   </div>
 </template>
 

@@ -9,6 +9,8 @@ Vue.use(VueRouter);
 import Home from './components/Home';
 import LoginCard from './components/auth/LoginCard';
 
+import AboutListCard from './components/about/AboutList';
+
 import GalleryShowCard from './components/gallery/GalleryShowCard';
 
 import WorkingCreditsShowCard from './components/workingcredits/WorkingCreditsShowCard';
@@ -35,6 +37,9 @@ const routes = [
   },{
     path: '/workingcredits/:id',
     component: WorkingCreditsShowCard
+  },{
+    path: '/aboutme',
+    component: AboutListCard
   }
 ];
 

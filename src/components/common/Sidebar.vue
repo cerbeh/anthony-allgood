@@ -2,7 +2,8 @@
   <div class="sidebar-style">
     <ul class="navbar-style" v-if="sidebarOn">
       <li>
-        <AboutList v-on:toggle-side-bar="toggleSidebar" />
+        <!-- <AboutList v-on:toggle-side-bar="toggleSidebar" /> -->
+        <a href="/#/aboutme" class="sidebar-item" v-on:click="toggleSidebar">About Me</a>
       </li>
       <li>
         <a href="/#/workingcredits" class="sidebar-item" v-on:click="toggleSidebar">Acting Credits</a>

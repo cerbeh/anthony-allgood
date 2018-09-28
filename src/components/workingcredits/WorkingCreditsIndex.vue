@@ -7,29 +7,7 @@
       id="medium-wrapper"
       v-for="medium in mediums"
       >
-        <table class="table is-striped is-hoverable is-fullwidth">
-          <thead>
-            <tr>
-              <th colspan="4">
-                <h2 class="subtitle is-3">{{medium.discipline}}</h2>
-              </th>
-            </tr>
-            <tr>
-              <th>Title</th>
-              <th>Character</th>
-              <th>Director</th>
-              <th>Company</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="credit in medium.credits">
-              <td>{{credit.title}}</td>
-              <td>{{credit.character}}</td>
-              <td>{{credit.director}}</td>
-              <td>{{credit.company}}</td>
-            </tr>
-          </tbody>
-        </table>
+        <TableCard :medium="medium"/>
         <hr/>
       </div>
     </div>
@@ -38,6 +16,7 @@
 
 <script>
 import axios from 'axios';
+import TableCard from './WorkingCreditsTableCard'
 
 export default {
   name: 'WorkingCredits',
@@ -58,6 +37,9 @@ export default {
     toggleList() {
       this.sidebarItemList = !this.sidebarItemList;
     }
+  },
+  components: {
+    TableCard
   }
 };
 </script>
