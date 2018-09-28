@@ -52,7 +52,7 @@ export default {
       method: 'GET',
       url: '/api/workingcredits'
     })
-    .then(res => this.mediums = res.data);
+      .then(res => this.mediums = res.data);
   },
   methods: {
     toggleList() {

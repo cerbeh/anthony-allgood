@@ -3,24 +3,24 @@ About Me
     --Small piece describing yourself
     --Currently
 
-  -WorkingCredits
+
+    -For more contact agent
+
+  WorkingCredits
     -Section for acting
       --school workshops
       --professional exp
-      --voicereel (is this the right place)
       --Entertainer
-  -TIE
-    -Youth Theatre Leader
-    -School Shows
-    -Project work
-  -Section for music
-    -My music
-      --tracks hosted on soundcloud
-    -Musical Theatre
-  -Section for writer
-    -Any scripts written over the past
-
-    -For more contact agent
+    -TIE
+      --Youth Theatre Leader
+      --School Shows
+      --Project work
+    -Section for writer
+      -Any scripts written over the past
+    -Section for music
+      --My music
+        --tracks hosted on soundcloud
+      --Musical Theatre
 
 Galleries
   -albums
@@ -30,6 +30,8 @@ Galleries
 
   -showreel
     --Video needs to be made?
+
+  -voicereel (is this the right place)
 
 contact section
   -Link to spotlight

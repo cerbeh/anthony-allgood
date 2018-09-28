@@ -3,8 +3,10 @@
       <div class="column is-12 has-text-centered">
         <h1 class="title is-1">Gallery</h1>
       </div>
-      <div class="column is-2" v-for="image in images" v-on:click="toggleModal(image)" >
-        <GalleryImage :image="image" />
+      <div class="gallery-wrapper">
+        <div class="column gallery-cell is-2" v-for="image in images" v-on:click="toggleModal(image)" >
+          <GalleryImage :image="image" />
+        </div>
       </div>
       <Modal :modalOn="modalOn" :data="modalData" v-on:toggle-modal="toggleModal"/>
     </div>
@@ -58,6 +60,11 @@ export default {
 .gallery-item {
   display: flex;
   align-items: center;
-
+}
+.gallery-wrapper {
+  display: table;
+}
+.gallery-cell {
+  display: table-cell;
 }
 </style>
