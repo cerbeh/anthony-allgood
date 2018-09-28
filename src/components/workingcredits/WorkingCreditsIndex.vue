@@ -8,7 +8,6 @@
       v-for="medium in mediums"
       >
         <TableCard :medium="medium" :toggleTable="toggleTable"/>
-        <hr/>
       </div>
     </div>
 </section>

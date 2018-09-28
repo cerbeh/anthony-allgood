@@ -4,7 +4,7 @@
       <tr>
         <th
           colspan="4"
-          v-on:click="() => toggleTable(medium)"
+          v-on:click="toggleTable(medium)"
         >
           <h2 class="subtitle is-3">{{medium.discipline}}</h2>
         </th>
@@ -24,6 +24,7 @@
         <td>{{credit.company}}</td>
       </tr>
     </tbody>
+    <hr v-show="medium.showData" colspan="4" />
   </table>
 </template>
 
