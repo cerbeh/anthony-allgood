@@ -6,7 +6,8 @@
       :per-page="1"
     >
       <slide v-for="gallery in galleries">
-        <img :src="https://imgur.com/0Gd7Pf8" alt="">
+        <p>{{gallery.title}}</p>
+        <img src="" alt="">
       </slide>
     </carousel>
   </div>
@@ -24,16 +25,10 @@ export default {
       galleries: []
     };
   },
-  methods: {
-    toggleList() {
-      this.sidebarItemList = !this.sidebarItemList
-    }
-  },
   mounted() {
     axios({
       method: 'GET',
-      url: 'https://api.imgur.com/3/account/cerbeh/albums',
-      headers: { Authorization: 'Client-ID 7993a6868066306'}
+      url: '/api/gallerylist'
     })
       .then(res => {
         console.log(res.data.data);
