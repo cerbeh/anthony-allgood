@@ -4,10 +4,12 @@
     <!-- Will work on getting vue carosel to work. -->
     <carousel
       :per-page="1"
+      v-if="showSlider"
     >
       <slide v-for="gallery in galleries">
-        <p>{{gallery.title}}</p>
-        <img src="" alt="">
+        <GalleryCoverImage
+          :gallery="gallery"
+        />
       </slide>
     </carousel>
   </div>
@@ -16,12 +18,14 @@
 <script>
 import axios from 'axios'
 import { Carousel, Slide } from 'vue-carousel';
+import GalleryCoverImage from './GalleryCoverImage'
 
 export default {
   name: 'GalleryList',
   data() {
     return {
       sidebarItemList: false,
+      showSlider: false,
       galleries: []
     };
   },
@@ -31,13 +35,14 @@ export default {
       url: '/api/gallerylist'
     })
       .then(res => {
-        console.log(res.data.data);
-        this.galleries = res.data.data
+        this.galleries = res.data.data;
+        this.showSlider = true;
       })
   },
   components: {
     Carousel,
-    Slide
+    Slide,
+    GalleryCoverImage
   }
 }
 </script>

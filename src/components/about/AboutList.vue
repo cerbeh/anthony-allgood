@@ -2,6 +2,7 @@
 <template lang="html">
   <div>
       <p>About List Page</p>
+      <img src="https://i.imgur.com/0Gd7Pf8.jpg" alt="">
   </div>
 </template>
 
