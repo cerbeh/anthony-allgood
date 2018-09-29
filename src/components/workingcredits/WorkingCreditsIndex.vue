@@ -33,7 +33,10 @@ export default {
       method: 'GET',
       url: '/api/workingcredits'
     })
-      .then(res => this.mediums = res.data);
+      .then(res => {
+        console.log(res.data);
+        this.mediums = res.data;
+      })
   },
   methods: {
     toggleList() {

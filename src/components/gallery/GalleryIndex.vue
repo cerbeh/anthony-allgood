@@ -2,8 +2,11 @@
   <div class="sidebar-item">
       <h2 class="title is-3">Gallery</h2>
     <carousel
-      :per-page="1"
       v-if="showSlider"
+      :per-page="1"
+      :speed="500"
+      :loop="true"
+      scrollPerPage="false"
     >
       <slide v-for="gallery in galleries">
         <GalleryCoverImage :gallery="gallery" />
@@ -41,6 +44,12 @@ export default {
     Carousel,
     Slide,
     GalleryCoverImage
+  },
+  methods: {
+    //For Millie
+    filterCredits() {
+      //Do something
+    }
   }
 }
 </script>

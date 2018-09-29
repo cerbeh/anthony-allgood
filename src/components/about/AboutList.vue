@@ -11,18 +11,18 @@ export default {
   name: 'AboutList',
   data() {
     return {
-      sidebarItemList: false,
+      sidebarItemList: false
     };
   },
   methods: {
     toggleList() {
-      this.sidebarItemList = !this.sidebarItemList
+      this.sidebarItemList = !this.sidebarItemList;
     },
     toggleSidebar() {
       this.sidebarOn = !this.sidebarOn;
     }
   }
-}
+};
 </script>
 
 <style lang="css">
