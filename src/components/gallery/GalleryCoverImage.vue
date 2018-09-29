@@ -2,7 +2,8 @@
   <div class="card">
     <header class="card-header">
       <p class="card-header-title is-centered title is-3">
-        {{gallery.title}}
+        {{gallery.title}}.
+        ({{gallery.images_count}})
       </p>
     </header>
     <div class="card-image">

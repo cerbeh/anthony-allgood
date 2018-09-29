@@ -1,7 +1,10 @@
 <template lang="html">
   <section class="section">
     <div class="container">
-      <h1 class="title is-1">Working Credits</h1>
+      <header class="header">
+        <h1 class="title is-1">Working Credits</h1>
+        <p class="subtitle is-3">click to toggle</p>
+      </header>
       <hr/>
       <div
       id="medium-wrapper"

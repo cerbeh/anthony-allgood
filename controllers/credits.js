@@ -2,7 +2,7 @@ const User = require('../models/user');
 
 
 //Data is hardcoded here but eventually the front end will be delivering data
-const data = '5bae227c9cc1ff670c7373d4';
+const data = '5baf5be82e9afc7b4e0a7016';
 
 
 //Needs to possibly be adapted to work in a different way. Index route below is using req.body.data
