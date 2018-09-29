@@ -1,15 +1,12 @@
 <template lang="html">
   <div class="sidebar-item">
       <h2 class="title is-3">Gallery</h2>
-    <!-- Will work on getting vue carosel to work. -->
     <carousel
       :per-page="1"
       v-if="showSlider"
     >
       <slide v-for="gallery in galleries">
-        <GalleryCoverImage
-          :gallery="gallery"
-        />
+        <GalleryCoverImage :gallery="gallery" />
       </slide>
     </carousel>
   </div>
@@ -36,6 +33,7 @@ export default {
     })
       .then(res => {
         this.galleries = res.data.data;
+        console.log(this.galleries);
         this.showSlider = true;
       })
   },
