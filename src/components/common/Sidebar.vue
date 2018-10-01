@@ -8,15 +8,14 @@
         <a href="/#/workingcredits" class="sidebar-item" v-on:click="toggleSidebar">Acting Credits</a>
       </li>
       <li>
-        <!-- <GalleryList v-on:toggle-side-bar="toggleSidebar" /> -->
         <a href="/#/gallery" class="sidebar-item" v-on:click="toggleSidebar">Gallery</a>
       </li>
       <li>
         <a href="/#/contact" class="sidebar-item" v-on:click="toggleSidebar">Contact</a>
       </li>
     </ul>
-    <i class="fas fa-chevron-right fa-3x sidebar-item" v-on:click="toggleSidebar" v-if="!sidebarOn"></i>
-    <i class="fas fa-chevron-left fa-3x sidebar-item" v-on:click="toggleSidebar" v-if="sidebarOn"></i>
+    <i class="fas fa-chevron-right fa-3x sidebar-item chevron-style" v-on:click="toggleSidebar" v-if="!sidebarOn"></i>
+    <i class="fas fa-chevron-left fa-3x sidebar-item chevron-style" v-on:click="toggleSidebar" v-if="sidebarOn"></i>
   </div>
 </template>
 
@@ -57,6 +56,9 @@ export default {
   height: inherit;
   justify-content: center;
   animation: toggleSidebarOn .05s 1;
+}
+.chevron-style {
+  /* background-color: goldenrod; */
 }
 
 @keyframes toggleSidebarOn {

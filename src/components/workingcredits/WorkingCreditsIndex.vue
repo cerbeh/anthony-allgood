@@ -4,13 +4,15 @@
       <header class="header">
         <h1 class="title is-1">Working Credits</h1>
         <p class="subtitle is-3">click to toggle</p>
+          <input class="input" type="text" name="search" id="search" placeholder="Search" v-model="search">
+          {{this.search}}
       </header>
       <hr/>
       <div
       id="medium-wrapper"
-      v-for="medium in mediums"
+      v-for="post in filteredList"
       >
-        <TableCard :medium="medium" :toggleTable="toggleTable"/>
+        <TableCard :medium="post" :toggleTable="toggleTable"/>
       </div>
     </div>
 </section>
@@ -25,7 +27,8 @@ export default {
   data() {
     return {
       mediums: [],
-      sidebarItemList: false
+      sidebarItemList: false,
+      search: ''
     };
   },
   mounted() {
@@ -36,7 +39,15 @@ export default {
       .then(res => {
         console.log(res.data);
         this.mediums = res.data;
-      })
+      });
+  },
+  computed: {
+    //Search feature will go here and then the for loop in the html will be adjusted
+    filteredList() {
+      return this.mediums.filter(medium => {
+        return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
+      });
+    }
   },
   methods: {
     toggleList() {

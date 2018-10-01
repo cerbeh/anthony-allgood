@@ -26,4 +26,8 @@ export default {
 
 <style lang="css">
   @import '../node_modules/bulma/css/bulma.css';
+  #app {
+    font-family: 'Open Sans', sans-serif;
+    /* background-color: chartreuse; */
+  }
 </style>
