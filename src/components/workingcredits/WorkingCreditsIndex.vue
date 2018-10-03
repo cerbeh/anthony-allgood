@@ -64,24 +64,43 @@ export default {
       switch (this.searchDiscipline) {
 
         case 'medium':
-          return this.mediums.filter(medium => {
-            return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
-          });
-          break;
+        return this.mediums.filter(medium => {
+          return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
+        });
+        break;
 
         case 'director':
-          console.log('Would search by director');
-          return this.mediums.filter(medium => {
-            return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
-          });
-          break;
+        console.log('Would search by director');
+        return this.mediums.filter(medium => {
+          return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
+        });
+        break;
 
         case 'company':
-          console.log('Would search by company');
-          return this.mediums.filter(medium => {
-            return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
-          });
-          break;
+        console.log(this.mediums, 'mediums');
+
+        const filteredCategory = this.mediums.map(discipline => {
+          return {
+            discipline: discipline.discipline,
+            credits: discipline.credits.filter(credit => {
+              return credit.company.toLowerCase().includes(this.search.toLowerCase())
+            }),
+            showData: false
+          }
+        })
+
+        // .filter(discipline => {
+        //   console.log(discipline[0]);
+        //   return discipline.credits.length > 1;
+        // })
+
+        console.log(filteredCategory, 'filteredCategory');
+        return filteredCategory;
+        // return this.mediums.filter(medium => {
+        //
+        //   return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
+        // });
+        break;
       }
     },
     // console.log(this.searchDiscipline);
