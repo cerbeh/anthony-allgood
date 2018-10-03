@@ -3,18 +3,30 @@
     <div class="container">
       <header class="header">
         <h1 class="title is-1">Working Credits</h1>
-        <p class="subtitle is-3">click to toggle</p>
+        <div class="search-bar tile is-ancester">
           <input class="input" type="text" name="search" id="search" placeholder="Search" v-model="search">
-          {{this.search}}
+          <div class="select">
+            <select v-model="searchDiscipline">
+              <option value="medium" selected>Medium</option>
+              <option value="director">Director</option>
+              <option value="company">Company</option>
+            </select>
+            {{ searchDiscipline }}
+          </div>
+        </div>
       </header>
       <hr/>
+
       <div
       id="medium-wrapper"
-      v-for="post in filteredList"
+      v-for="medium in filteredList"
       >
-        <TableCard :medium="post" :toggleTable="toggleTable"/>
-      </div>
+      <TableCard
+      :medium="medium"
+      :toggleTable="toggleTable"
+      />
     </div>
+  </div>
 </section>
 </template>
 
@@ -24,31 +36,57 @@ import TableCard from './WorkingCreditsTableCard'
 
 export default {
   name: 'WorkingCredits',
+
   data() {
     return {
       mediums: [],
       sidebarItemList: false,
-      search: ''
+      search: '',
+      searchDiscipline: 'medium'
     };
   },
+
   mounted() {
     axios({
       method: 'GET',
       url: '/api/workingcredits'
     })
-      .then(res => {
-        console.log(res.data);
-        this.mediums = res.data;
-      });
+    .then(res => {
+      this.mediums = res.data;
+    });
   },
+
   computed: {
     //Search feature will go here and then the for loop in the html will be adjusted
+
+    // Search through Discipline
     filteredList() {
-      return this.mediums.filter(medium => {
-        return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
-      });
-    }
+      switch (this.searchDiscipline) {
+
+        case 'medium':
+          return this.mediums.filter(medium => {
+            return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
+          });
+          break;
+
+        case 'director':
+          console.log('Would search by director');
+          return this.mediums.filter(medium => {
+            return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
+          });
+          break;
+
+        case 'company':
+          console.log('Would search by company');
+          return this.mediums.filter(medium => {
+            return medium.discipline.toLowerCase().includes(this.search.toLowerCase())
+          });
+          break;
+      }
+    },
+    // console.log(this.searchDiscipline);
   },
+
   methods: {
     toggleList() {
       this.sidebarItemList = !this.sidebarItemList;
@@ -57,6 +95,7 @@ export default {
       targetTable.showData = !targetTable.showData;
     }
   },
+
   components: {
     TableCard
   }
